@@ -21,6 +21,7 @@ for (let i = 0; i < whiteList.length; i++){
     console.log(userMail, mailWhiteList, isFound);
 }
 
+// OUTPUT
 if (isFound) {
     alert("Benvenuto!");
 } else{
