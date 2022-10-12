@@ -2,23 +2,25 @@
 Stabilire il vincitore, in base a chi fa il punteggio più alto. */
 let userNum = "";
 let compNum = "";
+const nutBtn = document.getElementById("nut-btn");
 
-for (let i = 1; i <= 1; i++){
-    const nutNum = parseInt(Math.random() * (7 - 1) + 1);
-    userNum = nutNum;
-    console.log(userNum);
-}
+nutBtn.addEventListener ("click", function() {
 
-for (let i = 1; i <= 1; i++){
-    const nutNum = parseInt(Math.random() * (7 - 1) + 1);
-    compNum = nutNum;
-    console.log(compNum);
-}
+    userNum = parseInt(Math.random() * (7 - 1) + 1);
 
-if (userNum > compNum){
-    alert("Complimenti hai vinto!")
-} else if (userNum < compNum){
-    alert("Mi dispiace questa volta hai perso!")
-} else {
-    alert("Abbiamo un pareggio!")
-}
+    compNum = parseInt(Math.random() * (7 - 1) + 1);
+
+    document.getElementById("user-num").innerHTML = `Il tuo numero è: ${userNum}`;
+    document.getElementById("comp-num").innerHTML = `Il numero del computer è: ${compNum}`;
+    
+    if (userNum > compNum){
+        document.getElementById("result").innerHTML = `Complimenti hai vinto!`;
+    } else if (userNum < compNum){
+        document.getElementById("result").innerHTML = `Mi dispiace hai perso!`;
+    } else {
+        document.getElementById("result").innerHTML = `Abbiamo un pareggio!`;
+    }
+})
+
+
+
